@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .login-box {
+            position: relative;
+            width: 400px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        .login-box h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .user-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+        }
+
+        .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .user-box input:focus ~ label,
+        .user-box input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+        .login-box a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #03a9f4;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.5s;
+            letter-spacing: 4px;
+            overflow: hidden;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .login-box a:hover {
+            background: #03a9f4;
+            color: #fff;
+            box-shadow: 0 0 5px #03a9f4, 0 0 25px #03a9f4, 0 0 50px #03a9f4, 0 0 100px #03a9f4;
+        }
+
+        .login-box a span {
+            position: absolute;
+            display: block;
+        }
+
+        .login-box a span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #03a9f4);
+            animation: btn-anim1 1s linear infinite;
+        }
+
+        .login-box a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #03a9f4);
+            animation: btn-anim2 1s linear infinite;
+        }
+
+        .login-box a span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #03a9f4);
+            animation: btn-anim3 1s linear infinite;
+        }
+
+        .login-box a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #03a9f4);
+            animation: btn-anim4 1s linear infinite;
+        }
+
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+            50%, 100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+            50%, 100% {
+                top: 100%;
+            }
+        }
+
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+            50%, 100% {
+                right: 100%;
+            }
+        }
+
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+            50%, 100% {
+                bottom: 100%;
+            }
+        }
+
+        .signup {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .signup input {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="user-box">
+                <input type="text" id="username" name="username" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="password" name="password" required="">
+                <label>Password</label>
+            </div>
+            <a href="#" onclick="validateForm(event)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+        </form>
+
+        <div class="signup" id="signupForm">
+            <h2>Sign Up</h2>
+            <form id="registerForm">
+                <div class="user-box">
+                    <input type="text" id="newUsername" name="newUsername" required="">
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" id="newPassword" name="newPassword" required="">
+                    <label>Password</label>
+                </div>
+                <div class="user-box">
+                    <input type="email" id="email" name="email" required="">
+                    <label>Email</label>
+                </div>
+                <a href="#" onclick="registerUser(event)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Sign Up
+                </a>
+            </form>
+        </div>
+        
+        <a href="#" onclick="toggleSignup()">Don't have an account? Sign Up</a>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent the form from submitting automatically
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Simple validation check
+            if (username === "" || password === "") {
+                alert("Both username and password are required!");
+            } else {
+                alert("Login successful!");
+                // You can add further logic here to process the form
+            }
+        }
+
+        function toggleSignup() {
+            var signupForm = document.getElementById("signupForm");
+            if (signupForm.style.display === "none" || signupForm.style.display === "") {
+                signupForm.style.display = "block";
+            } else {
+                signupForm.style.display = "none";
+            }
+        }
+
+        function registerUser(event) {
+            event.preventDefault(); // Prevent the form from submitting automatically
+
+            var newUsername = document.getElementById("newUsername").value;
+            var newPassword = document.getElementById("newPassword").value;
+            var email = document.getElementById("email").value;
+
+            // Simple validation check
+            if (newUsername === "" || newPassword === "" || email === "") {
+                alert("All fields are required for sign up!");
+            } else {
+                alert("Registration successful!");
+                // You can add further logic here to process the registration
+                document.getElementById("signupForm").style.display = "none"; // Hide signup form after registration
+            }
+        }
+    </script>
+</body>
+</html>

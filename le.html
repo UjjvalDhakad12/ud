@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Carousel Template</title>
+    <style>
+        .large-text {
+            font-size: 2em;
+            color:brown
+            /* Adjust this value as per your preference */
+        }
+
+        footer {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        footer h1 {
+            color: rgb(95, 0, 0);
+        }
+
+        footer img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        .content {
+            margin: 60px 0;
+            /* Space below the navbar */
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            max-height: 70vh;
+            /* 40% of the viewport height */
+            overflow-y: auto;
+            /* Allows scrolling if content exceeds max height */
+        }
+
+        .clock {
+            max-height: 100%;
+            /* Maintain image aspect ratio */
+            width: auto;
+            /* Adjust width automatically */
+            margin: 5px 0;
+            /* Add some spacing between images */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Ujjval Dhakad</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="link.html">Link</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search" onsubmit="return searchContent(event)">
+                        <input id="searchInput" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search" required>
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <span class="large-text">Clock Code</span>
+        <br>
+        
+        <div class="image-column">
+            <h3>HTMl</h3>
+            <img src="code photo/code-snapshot.png" class="clock">
+            <h3>JS</h3>
+            <img src="code photo/code-snapshot s.png" class="clock">
+            <h3>CSS</h3>
+            <img src="code photo/Screenshot 2024-10-05 122146.png" class="clock">
+            <img src="code photo/Screenshot 2024-10-05 122133.png" class="clock">
+        </div>
+    </div>
+    <div class="content">
+        <span class="large-text">Google code</span>
+        <br>
+        
+        <div class="image-column">
+            <h3>HTMl</h3>
+            <img src="code photo\google h.png" class="clock">
+            <h3>JS</h3>
+            <img src="code photo\google.j.png" class="clock">
+            <h3>CSS</h3>
+            <img src="code photo/google c.png" class="clock">
+        </div>
+    </div>
+
+    <footer>
+        <h1>Follow Me</h1>
+        <hr>
+        <a href="https://www.instagram.com/ujjvaldhakad12/" target="_blank">
+            <img src="img/th.jpeg" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/ujjval.dhakad.79" target="_blank">
+            <img src="img/th (1).jpeg" alt="Facebook">
+        </a>
+    </footer>
+</body>
+
+</html>
