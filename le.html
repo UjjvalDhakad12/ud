@@ -13,8 +13,7 @@
     <style>
         .large-text {
             font-size: 2em;
-            color:brown
-            /* Adjust this value as per your preference */
+            color: brown;
         }
 
         footer {
@@ -33,34 +32,27 @@
             margin: 0 10px;
         }
 
-        .content {
-            margin: 60px 0;
-            /* Space below the navbar */
-            padding: 20px;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         .image-column {
             display: flex;
             flex-direction: column;
             max-height: 70vh;
-            /* 40% of the viewport height */
             overflow-y: auto;
-            /* Allows scrolling if content exceeds max height */
         }
 
         .clock {
-            max-height: 100%;
-            /* Maintain image aspect ratio */
-            width: auto;
-            /* Adjust width automatically */
+            width: 100%;
+            height: auto;
             margin: 5px 0;
-            /* Add some spacing between images */
+        }
+
+        @media (max-width: 768px) {
+            .large-text {
+                font-size: 1.5em;
+            }
+
+            .content {
+                margin: 40px 0;
+            }
         }
     </style>
 </head>
@@ -93,35 +85,54 @@
         </nav>
     </header>
 
-    <div class="content">
-        <span class="large-text">Clock Code</span>
-        <br>
-        
-        <div class="image-column">
-            <h3>HTMl</h3>
-            <img src="code photo/code-snapshot.png" class="clock">
-            <h3>JS</h3>
-            <img src="code photo/code-snapshot s.png" class="clock">
-            <h3>CSS</h3>
-            <img src="code photo/Screenshot 2024-10-05 122146.png" class="clock">
-            <img src="code photo/Screenshot 2024-10-05 122133.png" class="clock">
+    <div class="container mt-5 content">
+        <div class="row text-center">
+            <div class="col-12">
+                <span class="large-text">Clock Code</span>
+            </div>
         </div>
-    </div>
-    <div class="content">
-        <span class="large-text">Google code</span>
-        <br>
-        
-        <div class="image-column">
-            <h3>HTMl</h3>
-            <img src="code photo\google h.png" class="clock">
-            <h3>JS</h3>
-            <img src="code photo\google.j.png" class="clock">
-            <h3>CSS</h3>
-            <img src="code photo/google c.png" class="clock">
+
+        <div class="row image-column mt-4">
+            <div class="col-md-4">
+                <h3>HTML</h3>
+                <img src="code photo/code-snapshot.png" class="img-fluid clock" alt="HTML Code">
+            </div>
+            <div class="col-md-4">
+                <h3>JS</h3>
+                <img src="code photo/code-snapshot s.png" class="img-fluid clock" alt="JS Code">
+            </div>
+            <div class="col-md-4">
+                <h3>CSS</h3>
+                <img src="code photo/Screenshot 2024-10-05 122146.png" class="img-fluid clock" alt="CSS Code">
+                <img src="code photo/Screenshot 2024-10-05 122133.png" class="img-fluid clock mt-2" alt="CSS Code 2">
+            </div>
         </div>
     </div>
 
-    <footer>
+    <div class="container mt-5 content">
+        <div class="row text-center">
+            <div class="col-12">
+                <span class="large-text">Google Code</span>
+            </div>
+        </div>
+
+        <div class="row image-column mt-4">
+            <div class="col-md-4">
+                <h3>HTML</h3>
+                <img src="code photo/google h.png" class="img-fluid clock" alt="Google HTML Code">
+            </div>
+            <div class="col-md-4">
+                <h3>JS</h3>
+                <img src="code photo/google.j.png" class="img-fluid clock" alt="Google JS Code">
+            </div>
+            <div class="col-md-4">
+                <h3>CSS</h3>
+                <img src="code photo/google c.png" class="img-fluid clock" alt="Google CSS Code">
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5">
         <h1>Follow Me</h1>
         <hr>
         <a href="https://www.instagram.com/ujjvaldhakad12/" target="_blank">
