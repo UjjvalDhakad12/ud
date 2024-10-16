@@ -41,7 +41,7 @@ Error generating stack: `+o.message+`
                 HTML, or HyperText Markup Language, is the standard language used to create and design documents on the web. 
                 It structures the content of a webpage using elements like headings, paragraphs, links, and images. 
                 By using HTML, developers can build interactive and visually appealing websites that are accessible across various devices.
-            `},{src:"./pexels-realtoughcandy-11035386.jpg",alt:"Image 2",text:"CSS",paragraph:`
+            `},{src:"pexels-realtoughcandy-11035386.jpg",alt:"Image 2",text:"CSS",paragraph:`
                 CSS, or Cascading Style Sheets, is used to style HTML elements on web pages. 
                 It enables developers to apply colors, fonts, and layouts, enhancing the visual appeal. 
                 CSS also supports responsive design, ensuring a great user experience across devices.
